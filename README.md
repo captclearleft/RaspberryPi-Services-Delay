@@ -17,3 +17,6 @@ If you are not familiar with how to use these - Simply - put the .sh files in a 
 
 
 The bettercap service waits for check_wlan0.service, then the pwngrid-peer waits for check_wlan0mon.service...
+
+
+NOTES: When reading the .sh files, you will notice that the script waits for wlan0 "DOWN", and wlan0mon "UNKNOWN", that is the way that they are intended.  That is the way they are brought online in the actual system.  If you change these - the script won't work, as wlan0 is never UP, and wlan0mon is always UNKNOWN...
