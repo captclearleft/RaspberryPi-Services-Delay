@@ -1,0 +1,10 @@
+[Unit]
+Description=Check Wlan0 is available and Down
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/scripts/wlan0ready.sh
+
+[Install]
+WantedBy=multi-user.target

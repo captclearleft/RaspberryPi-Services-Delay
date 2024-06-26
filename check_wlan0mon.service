@@ -1,0 +1,10 @@
+[Unit]
+Description=Check Wlan0mon is available and in monitor mode
+After=bettercap.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/scripts/wlan0mon_checker.sh
+
+[Install]
+WantedBy=multi-user.target
